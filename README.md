@@ -1,4 +1,4 @@
-# HRsATHI – AI-Powered Resume Screening & Intelligent Candidate Ranking
+# HRsATHI is an AI-Powered Resume Screening & Intelligent Candidate Ranking
 
 <p align="center">
   <img src="docs/logo.png" width="180"/>
