@@ -1,6 +1,6 @@
 name: My  workflow
 
-on: [push, fork]
+on: push
 
 jobs:
     _job:
