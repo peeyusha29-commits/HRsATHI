@@ -6,11 +6,12 @@ jobs:
     _job:
         runs-on: ubuntu-latest
         steps:
-            - name: Welcome message
-             run: echo "My  Github Actions Job"
-
-            - name: list files
-                run: ls
+        - name: Checkout repository
+          uses: actions/checkout@v7
+        - name: Welcome message
+          run: echo "My  Github Actions Job"
+        - name: list files
+          run: ls
                 
             - name: Read Files    
                 run: cat README.md
