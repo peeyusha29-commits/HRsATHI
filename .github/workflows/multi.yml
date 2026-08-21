@@ -16,7 +16,7 @@ jobs:
           run: sleep 3
 
         - name: upload the created artifacts
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           with:
             name : dragon-text-file
             path: dragon.txt
@@ -30,7 +30,7 @@ jobs:
           run: sleep 1
 
         - name: Download the artifact
-          uses: actions/download-artifact@v3
+          uses: actions/download-artifact@v4
           with:
             name: dragon.txt # corresponds to the uploaded file name
 
@@ -42,7 +42,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Download the artifact
-          uses: actions/download-artifact@v8
+          uses: actions/download-artifact@v4
           with:
             name: dragon.txt  
 
