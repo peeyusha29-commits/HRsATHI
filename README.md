@@ -7,7 +7,7 @@
 <p align="center">
 <b>Hire Smarter • Faster • Fairer</b>
 
-AI-powered Applicant Tracking System (ATS) that automatically analyzes Job Descriptions, ranks candidates using AI, and helps recruiters identify the best talent within seconds.
+AI-powered Applicant Tracking System (ATS) that automatically analyzes Job Descriptions, ranks candidates using AI, and helps recruiters identify the bestest talent within seconds.
 </p>
 
 ---
