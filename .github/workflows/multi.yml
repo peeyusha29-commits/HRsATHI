@@ -8,17 +8,32 @@ jobs:
         steps:
         - name: Install cowsay 
           run: sudo apt-get update && sudo apt-get install -y cowsay
+
         - name: Execute cowsay CMD
           run: cowsay -f dragon "BHAG BHAG DKBOSE..." >> dragon.txt
-        - name: sleep for 30 sec
-          run: sleep 30
+
+        - name: sleep for 5 sec
+          run: sleep 3
+
+        - name: upload the created artifacts
+          uses: actions/upload-artifact@v7
+          with:
+            name : dragon-text-file
+            path: dragon.txt
+        archive: false
 
     test_job_2:
         needs: build_job_1
         runs-on: ubuntu-latest
         steps:
-        - name: sleep for another 10 sec
-          run: sleep 10        
+        - name: sleep for another 1 sec
+          run: sleep 1
+
+        - name: Download the artifact
+          uses: actions/download-artifact@v8
+          with:
+            name: dragon.txt # corresponds to the uploaded file name
+
         - name: Test file exists
           run: grep -i "BHAG" dragon.txt
           
@@ -26,8 +41,14 @@ jobs:
         needs: test_job_2
         runs-on: ubuntu-latest
         steps:
+        - name: Download the artifact
+          uses: actions/download-artifact@v8
+          with:
+            name: dragon.txt  
+
         - name: Read file
           run: cat dragon.txt
+          
         - name: Deploy
           run: echo" DEPLOYING.... "
             
