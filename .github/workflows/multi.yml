@@ -6,25 +6,25 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Install cowsay 
-            run: sudo-apt-get-install cowsay -y
+          run: sudo apt-get update && sudo apt-get install -y cowsay
         - name: Execute cowsay CMD
-            run: cowsay -f dragon "BHAG BHAG DKBOSE..." >> dragon.txt
+          run: cowsay -f dragon "BHAG BHAG DKBOSE..." >> dragon.txt
         - name: sleep for 30 sec
-            run: sleep 30
-    test_job_:
+          run: sleep 30
+    test_job_2:
         runs-on: ubuntu-latest
         steps:
         - name: sleep for another 10 sec
-            run: sleep 10        
+          run: sleep 10        
         - name: Test file exists
-            run: grep -i "BHAG" dragon.txt
+          run: grep -i "BHAG" dragon.txt
     deploy_job:
         runs-on: ubuntu-latest
         steps:
         - name: Read file
-            run: cat dragon.txt
+          run: cat dragon.txt
         - name: Deploy
-            run: echo"DEPLOYING...."
+          run: echo" DEPLOYING.... "
             
             
 
