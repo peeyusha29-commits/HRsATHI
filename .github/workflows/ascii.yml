@@ -1,7 +1,6 @@
 name: Generate ASCII artwork
 
-on:
-  push
+on: fork
 
 jobs:
   ascii_job:

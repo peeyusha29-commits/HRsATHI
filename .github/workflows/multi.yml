@@ -3,6 +3,7 @@ on:
     push
 jobs:
     build_job_1:
+        
         runs-on: ubuntu-latest
         steps:
         - name: Install cowsay 
@@ -11,14 +12,18 @@ jobs:
           run: cowsay -f dragon "BHAG BHAG DKBOSE..." >> dragon.txt
         - name: sleep for 30 sec
           run: sleep 30
+
     test_job_2:
+        needs: build_job_1
         runs-on: ubuntu-latest
         steps:
         - name: sleep for another 10 sec
           run: sleep 10        
         - name: Test file exists
           run: grep -i "BHAG" dragon.txt
+          
     deploy_job:
+        needs: test_job_2
         runs-on: ubuntu-latest
         steps:
         - name: Read file
