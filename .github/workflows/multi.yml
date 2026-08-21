@@ -20,7 +20,7 @@ jobs:
           with:
             name : dragon-text-file
             path: dragon.txt
-        archive: false
+     
 
     test_job_2:
         needs: build_job_1
