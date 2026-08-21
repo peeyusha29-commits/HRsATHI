@@ -9,11 +9,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: List repo files
         run: ls -ltra
 
-    - name: Executing shell script
-    - run: ./ascii-sript.sh
+      - name: Executing shell script
+        run: ./ascii-sript.sh
     
