@@ -30,9 +30,9 @@ jobs:
           run: sleep 1
 
         - name: Download the artifact
-          uses: actions/download-artifact@v7
+          uses: actions/download-artifact@v4
           with:
-            name: dragon.txt # corresponds to the uploaded file name
+            name: dragon-text-file
 
         - name: Test file exists
           run: grep -i "BHAG" dragon.txt
@@ -42,9 +42,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Download the artifact
-          uses: actions/download-artifact@v7
+          uses: actions/download-artifact@v4
           with:
-            name: dragon.txt  
+            name: dragon-text-file 
 
         - name: Read file
           run: cat dragon.txt
