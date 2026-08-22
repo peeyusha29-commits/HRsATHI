@@ -50,7 +50,8 @@ jobs:
           run: cat dragon.txt
 
         - name: Deploy
-          run: echo "DEPLOYING...."
+          run: echo "DEPLOYING....${{secrets.password}}"
+          run: echo ""
             
             
 
