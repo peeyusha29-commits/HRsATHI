@@ -1,4 +1,4 @@
-name : MULTIPLE_JOBS
+name: MULTIPLE_JOBS
 on: push
 jobs:
     build_job_1:
