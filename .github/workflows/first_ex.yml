@@ -1,5 +1,9 @@
 name: My  workflow
+<<<<<<< HEAD
+on: fork
+=======
 on: workflow_dispatch
+>>>>>>> b6990a54a846b11d9c4f841a8657a82af5d52325
 
 jobs:
     _job:
