@@ -6,18 +6,18 @@ on:
 
 jobs:
     deploy-on-ubuntu:
-        runs-on: Ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Echo Docker Details
-            run: docker info
+              run: docker info
             - name: Run images
-            run: docker run hello-world
+               run: docker run hello-world
               
     deploy-on-windows:
-        runs-on: window-latest
+        runs-on: windows-latest
         steps:
             - name: Echo Docker details
-            run: docker info
+              run: docker info
             
             - name: Run Images
-            run: docker run hello-world
+              run: docker run hello-world
