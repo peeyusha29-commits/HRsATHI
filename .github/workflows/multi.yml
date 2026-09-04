@@ -1,6 +1,5 @@
 name : MULTIPLE_JOBS
-on:
-  workflow_dispatch:
+on: push
 jobs:
     build_job_1:
         
@@ -23,7 +22,12 @@ jobs:
      
 
     test_job_2:
+        
         needs: build_job_1
+        concurrency:
+          group:
+          cancel-in-progress : true
+
         runs-on: ubuntu-latest
         steps:
         - name: sleep for another 1 sec
@@ -36,6 +40,7 @@ jobs:
 
         - name: Test file exists
           run: grep -i "BHAG" dragon.txt
+      sleep : 300s
           
     deploy_job:
         needs: test_job_2
