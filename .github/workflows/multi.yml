@@ -1,6 +1,6 @@
 name : MULTIPLE_JOBS
 on:
-    workflow dispatch:
+  workflow_dispatch:
 jobs:
     build_job_1:
         
