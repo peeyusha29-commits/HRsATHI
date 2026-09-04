@@ -1,6 +1,6 @@
 name : MULTIPLE_JOBS
 on:
-    push
+    workflow dispatch:
 jobs:
     build_job_1:
         
